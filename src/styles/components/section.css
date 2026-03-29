@@ -1,0 +1,30 @@
+.section {
+  padding: 6rem 5%;
+  position: relative;
+}
+
+.section-label {
+  text-align: center;
+  color: var(--accent2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 3.5rem;
+  font-size: 1.05rem;
+}
