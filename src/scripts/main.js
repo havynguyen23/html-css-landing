@@ -1,25 +1,30 @@
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-const overlay = document.getElementById('navOverlay');
+import { classList, getElementById } from './utils/dom';
 
-function openMenu() {
-  navLinks.classList.add('open');
-  hamburger.classList.add('open');
-  overlay.classList.add('open');
+const hamburger = getElementById('hamburger');
+const navLinks = getElementById('navLinks');
+const overlay = getElementById('navOverlay');
+
+const openMenu = () => {
+  classList.add(navLinks, 'open');
+  classList.add(hamburger, 'open');
+  classList.add(overlay, 'open');
+
   hamburger.setAttribute('aria-expanded', 'true');
-  document.body.style.overflow = 'hidden';
-}
 
-function closeMenu() {
-  navLinks.classList.remove('open');
-  hamburger.classList.remove('open');
-  overlay.classList.remove('open');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeMenu = () => {
+  classList.remove(navLinks, 'open');
+  classList.remove(hamburger, 'open');
+  classList.remove(overlay, 'open');
+
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
-}
+};
 
 hamburger.addEventListener('click', () => {
-  navLinks.classList.contains('open') ? closeMenu() : openMenu();
+  classList.contains(navLinks, 'open') ? closeMenu() : openMenu();
 });
 
 overlay.addEventListener('click', closeMenu);
