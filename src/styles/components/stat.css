@@ -1,0 +1,19 @@
+.stat {
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #fff, var(--muted));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

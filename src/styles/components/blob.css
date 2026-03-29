@@ -1,0 +1,42 @@
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  animation: float 8s ease-in-out infinite alternate;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent), transparent 70%);
+  top: -150px;
+  left: -150px;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent2), transparent 70%);
+  bottom: -100px;
+  right: -100px;
+  animation-delay: -4s;
+}
+
+.blob-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #f59e0b55, transparent 70%);
+  top: 40%;
+  left: 55%;
+  animation-delay: -2s;
+}
+
+@keyframes float {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(40px, 30px) scale(1.07);
+  }
+}
