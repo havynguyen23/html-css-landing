@@ -6,6 +6,32 @@
   padding: 0;
 }
 
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Global focus indicator */
+:focus-visible {
+  outline: 2px solid var(--accent2);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 :root {
   --bg: #0a0a0f;
   --surface: #12121a;

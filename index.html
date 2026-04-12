@@ -12,12 +12,16 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation Overlay -->
-    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
     <!-- Navigation -->
-    <nav>
-      <button class="logo" id="logo" aria-label="NexaTech – scroll to top">NexaTech</button>
+    <nav aria-label="Main navigation">
+      <button class="logo" id="logo" aria-label="NexaTech – scroll to top">
+        NexaTech
+      </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#features">Features</a></li>
         <li><a href="#how">How it works</a></li>
@@ -44,274 +48,295 @@
       </button>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
 
-      <div class="hero-badge">Now in Public Beta</div>
+        <div class="hero-badge">Now in Public Beta</div>
 
-      <h1>
-        Build the future<br />
-        with <span>AI-powered</span><br />
-        infrastructure
-      </h1>
-      <p>
-        Deploy intelligent systems at scale. NexaTech gives your team the tools
-        to ship faster, automate smarter, and scale without limits.
-      </p>
+        <h1>
+          Build the future<br />
+          with <span>AI-powered</span><br />
+          infrastructure
+        </h1>
+        <p>
+          Deploy intelligent systems at scale. NexaTech gives your team the
+          tools to ship faster, automate smarter, and scale without limits.
+        </p>
 
-      <div class="btn-group">
-        <a href="#pricing" class="btn-primary"> &#9654; Start for free </a>
-        <a href="#how" class="btn-secondary"> See how it works &rarr; </a>
+        <div class="btn-group">
+          <a href="#pricing" class="btn-primary"> &#9654; Start for free </a>
+          <a href="#how" class="btn-secondary"> See how it works &rarr; </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">12M+</div>
+            <div class="stat-label">API requests / day</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">99.99%</div>
+            <div class="stat-label">Uptime SLA</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4,200+</div>
+            <div class="stat-label">Teams onboarded</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">&lt; 50ms</div>
+            <div class="stat-label">Global latency</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logos -->
+      <div class="logos">
+        <p>Trusted by engineering teams at</p>
+        <div class="logo-row">
+          <span class="logo-item">Vercel</span>
+          <span class="logo-item">Stripe</span>
+          <span class="logo-item">Linear</span>
+          <span class="logo-item">Notion</span>
+          <span class="logo-item">Figma</span>
+          <span class="logo-item">Shopify</span>
+        </div>
       </div>
 
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">12M+</div>
-          <div class="stat-label">API requests / day</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">99.99%</div>
-          <div class="stat-label">Uptime SLA</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">4,200+</div>
-          <div class="stat-label">Teams onboarded</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">&lt; 50ms</div>
-          <div class="stat-label">Global latency</div>
-        </div>
-      </div>
-    </section>
+      <!-- Features -->
+      <section class="section" id="features">
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">Everything you need, nothing you don't</h2>
+        <p class="section-sub">
+          A fully integrated platform designed for modern engineering teams who
+          move fast.
+        </p>
 
-    <!-- Logos -->
-    <div class="logos">
-      <p>Trusted by engineering teams at</p>
-      <div class="logo-row">
-        <span class="logo-item">Vercel</span>
-        <span class="logo-item">Stripe</span>
-        <span class="logo-item">Linear</span>
-        <span class="logo-item">Notion</span>
-        <span class="logo-item">Figma</span>
-        <span class="logo-item">Shopify</span>
-      </div>
-    </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon icon-purple" aria-hidden="true">
+              &#9881;
+            </div>
+            <h3>Intelligent Orchestration</h3>
+            <p>
+              Automatically route and balance workloads across regions with
+              ML-driven scheduling that learns your traffic patterns.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon icon-cyan" aria-hidden="true">
+              &#128274;
+            </div>
+            <h3>Zero-Trust Security</h3>
+            <p>
+              End-to-end encryption, role-based access, and automated compliance
+              reports — baked in, not bolted on.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon icon-amber" aria-hidden="true">
+              &#9889;
+            </div>
+            <h3>Edge Computing</h3>
+            <p>
+              Deploy functions to 200+ PoPs worldwide. Cold starts under 5ms.
+              Your code, everywhere at once.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon icon-pink" aria-hidden="true">
+              &#128202;
+            </div>
+            <h3>Real-time Observability</h3>
+            <p>
+              Unified logs, traces, and metrics in a single pane. Custom
+              dashboards, smart anomaly alerts, and instant drill-downs.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon icon-green" aria-hidden="true">
+              &#128260;
+            </div>
+            <h3>AI-Assisted DevOps</h3>
+            <p>
+              Let our AI co-pilot review deployments, predict failures, and
+              suggest rollback strategies before incidents happen.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon icon-blue" aria-hidden="true">
+              &#128279;
+            </div>
+            <h3>Open Integrations</h3>
+            <p>
+              Native connectors for GitHub, Datadog, Slack, PagerDuty, and 300+
+              services. REST + GraphQL APIs included.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Features -->
-    <section class="section" id="features">
-      <div class="section-label">Capabilities</div>
-      <h2 class="section-title">Everything you need, nothing you don't</h2>
-      <p class="section-sub">
-        A fully integrated platform designed for modern engineering teams who
-        move fast.
-      </p>
+      <!-- Metrics -->
+      <section class="section metrics-bg" id="how">
+        <div class="section-label">Process</div>
+        <h2 class="section-title">Up and running in minutes</h2>
+        <p class="section-sub">
+          Three simple steps from zero to production-grade infrastructure.
+        </p>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon icon-purple">&#9881;</div>
-          <h3>Intelligent Orchestration</h3>
-          <p>
-            Automatically route and balance workloads across regions with
-            ML-driven scheduling that learns your traffic patterns.
-          </p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Connect your repo</h3>
+            <p>
+              Link GitHub, GitLab, or Bitbucket. NexaTech detects your stack
+              automatically.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Configure &amp; deploy</h3>
+            <p>
+              Define pipelines with YAML or our visual editor, then push to main
+              — your app propagates to every edge node in under 30 seconds.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Monitor &amp; iterate</h3>
+            <p>
+              Watch real-time metrics, receive AI insights, and ship the next
+              version with confidence.
+            </p>
+          </div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon icon-cyan">&#128274;</div>
-          <h3>Zero-Trust Security</h3>
-          <p>
-            End-to-end encryption, role-based access, and automated compliance
-            reports — baked in, not bolted on.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon icon-amber">&#9889;</div>
-          <h3>Edge Computing</h3>
-          <p>
-            Deploy functions to 200+ PoPs worldwide. Cold starts under 5ms. Your
-            code, everywhere at once.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon icon-pink">&#128202;</div>
-          <h3>Real-time Observability</h3>
-          <p>
-            Unified logs, traces, and metrics in a single pane. Custom
-            dashboards, smart anomaly alerts, and instant drill-downs.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon icon-green">&#128260;</div>
-          <h3>AI-Assisted DevOps</h3>
-          <p>
-            Let our AI co-pilot review deployments, predict failures, and
-            suggest rollback strategies before incidents happen.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon icon-blue">&#128279;</div>
-          <h3>Open Integrations</h3>
-          <p>
-            Native connectors for GitHub, Datadog, Slack, PagerDuty, and 300+
-            services. REST + GraphQL APIs included.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Metrics -->
-    <section class="section metrics-bg" id="how">
-      <div class="section-label">Process</div>
-      <h2 class="section-title">Up and running in minutes</h2>
-      <p class="section-sub">
-        Three simple steps from zero to production-grade infrastructure.
-      </p>
+      <!-- Testimonials -->
+      <section class="section">
+        <div class="section-label">Social proof</div>
+        <h2 class="section-title">Loved by engineers</h2>
+        <p class="section-sub">
+          From startups to Series D companies — here's what teams are saying.
+        </p>
 
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Connect your repo</h3>
-          <p>
-            Link GitHub, GitLab, or Bitbucket. NexaTech detects your stack
-            automatically.
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Configure &amp; deploy</h3>
-          <p>
-            Define pipelines with YAML or our visual editor, then push to main —
-            your app propagates to every edge node in under 30 seconds.
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Monitor &amp; iterate</h3>
-          <p>
-            Watch real-time metrics, receive AI insights, and ship the next
-            version with confidence.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section">
-      <div class="section-label">Social proof</div>
-      <h2 class="section-title">Loved by engineers</h2>
-      <p class="section-sub">
-        From startups to Series D companies — here's what teams are saying.
-      </p>
-
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <q
-            >We cut our deployment pipeline from 45 minutes to under 4.
-            NexaTech's AI orchestration is genuinely magic.</q
-          >
-          <div class="author">
-            <div class="avatar">LK</div>
-            <div>
-              <div class="author-name">Laura Kim</div>
-              <div class="author-role">VP Engineering, Pulse Analytics</div>
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <div class="stars" aria-hidden="true">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <q
+              >We cut our deployment pipeline from 45 minutes to under 4.
+              NexaTech's AI orchestration is genuinely magic.</q
+            >
+            <div class="author">
+              <div class="avatar">LK</div>
+              <div>
+                <div class="author-name">Laura Kim</div>
+                <div class="author-role">VP Engineering, Pulse Analytics</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="stars" aria-hidden="true">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <q
+              >The observability tooling alone is worth the price. We caught a
+              memory leak in staging that would have cost us $50k in prod.</q
+            >
+            <div class="author">
+              <div class="avatar">MR</div>
+              <div>
+                <div class="author-name">Marcus Reyes</div>
+                <div class="author-role">Staff SRE, Orbit Finance</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="stars" aria-hidden="true">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <q
+              >Finally, a platform that doesn't need a dedicated DevOps team to
+              operate. Our two-person infra squad manages everything with
+              ease.</q
+            >
+            <div class="author">
+              <div class="avatar">AT</div>
+              <div>
+                <div class="author-name">Aisha Torres</div>
+                <div class="author-role">CTO, Leafnote</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonial">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <q
-            >The observability tooling alone is worth the price. We caught a
-            memory leak in staging that would have cost us $50k in prod.</q
-          >
-          <div class="author">
-            <div class="avatar">MR</div>
-            <div>
-              <div class="author-name">Marcus Reyes</div>
-              <div class="author-role">Staff SRE, Orbit Finance</div>
-            </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="section" id="pricing">
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title">Simple, predictable pricing</h2>
+        <p class="section-sub">No surprises. Scale up or down anytime.</p>
+
+        <div class="pricing-grid">
+          <div class="plan">
+            <div class="plan-name">Starter</div>
+            <div class="plan-price">$0</div>
+            <div class="plan-period">Free forever</div>
+            <ul class="plan-features">
+              <li>3 projects</li>
+              <li>100k API calls / mo</li>
+              <li>5 edge locations</li>
+              <li>Community support</li>
+            </ul>
+            <a href="#" class="plan-btn plan-btn-outline">Get started free</a>
+          </div>
+
+          <div class="plan plan-popular">
+            <div class="popular-badge">Most Popular</div>
+            <div class="plan-name">Pro</div>
+            <div class="plan-price">$49</div>
+            <div class="plan-period">per seat / month</div>
+            <ul class="plan-features">
+              <li>Unlimited projects</li>
+              <li>10M API calls / mo</li>
+              <li>200+ edge locations</li>
+              <li>AI DevOps co-pilot</li>
+              <li>Priority support (4h SLA)</li>
+            </ul>
+            <a href="#" class="plan-btn plan-btn-filled">Start free trial</a>
+          </div>
+
+          <div class="plan">
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-price">Custom</div>
+            <div class="plan-period">volume pricing</div>
+            <ul class="plan-features">
+              <li>Unlimited everything</li>
+              <li>Dedicated infrastructure</li>
+              <li>SOC 2 / HIPAA compliance</li>
+              <li>SLA up to 99.999%</li>
+              <li>24/7 dedicated support</li>
+            </ul>
+            <a href="#" class="plan-btn plan-btn-outline">Contact sales</a>
           </div>
         </div>
-        <div class="testimonial">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <q
-            >Finally, a platform that doesn't need a dedicated DevOps team to
-            operate. Our two-person infra squad manages everything with ease.</q
-          >
-          <div class="author">
-            <div class="avatar">AT</div>
-            <div>
-              <div class="author-name">Aisha Torres</div>
-              <div class="author-role">CTO, Leafnote</div>
-            </div>
-          </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="cta-glow"></div>
+        <h2>Ready to ship faster?</h2>
+        <p>Join 4,200+ engineering teams already building on NexaTech.</p>
+        <div class="btn-group" style="position: relative">
+          <a href="#" class="btn-primary">Start for free &rarr;</a>
+          <a href="#" class="btn-secondary">Talk to an engineer</a>
         </div>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="section" id="pricing">
-      <div class="section-label">Pricing</div>
-      <h2 class="section-title">Simple, predictable pricing</h2>
-      <p class="section-sub">No surprises. Scale up or down anytime.</p>
-
-      <div class="pricing-grid">
-        <div class="plan">
-          <div class="plan-name">Starter</div>
-          <div class="plan-price">$0</div>
-          <div class="plan-period">Free forever</div>
-          <ul class="plan-features">
-            <li>3 projects</li>
-            <li>100k API calls / mo</li>
-            <li>5 edge locations</li>
-            <li>Community support</li>
-          </ul>
-          <a href="#" class="plan-btn plan-btn-outline">Get started free</a>
-        </div>
-
-        <div class="plan plan-popular">
-          <div class="popular-badge">Most Popular</div>
-          <div class="plan-name">Pro</div>
-          <div class="plan-price">$49</div>
-          <div class="plan-period">per seat / month</div>
-          <ul class="plan-features">
-            <li>Unlimited projects</li>
-            <li>10M API calls / mo</li>
-            <li>200+ edge locations</li>
-            <li>AI DevOps co-pilot</li>
-            <li>Priority support (4h SLA)</li>
-          </ul>
-          <a href="#" class="plan-btn plan-btn-filled">Start free trial</a>
-        </div>
-
-        <div class="plan">
-          <div class="plan-name">Enterprise</div>
-          <div class="plan-price">Custom</div>
-          <div class="plan-period">volume pricing</div>
-          <ul class="plan-features">
-            <li>Unlimited everything</li>
-            <li>Dedicated infrastructure</li>
-            <li>SOC 2 / HIPAA compliance</li>
-            <li>SLA up to 99.999%</li>
-            <li>24/7 dedicated support</li>
-          </ul>
-          <a href="#" class="plan-btn plan-btn-outline">Contact sales</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-      <div class="cta-glow"></div>
-      <h2>Ready to ship faster?</h2>
-      <p>Join 4,200+ engineering teams already building on NexaTech.</p>
-      <div class="btn-group" style="position: relative">
-        <a href="#" class="btn-primary">Start for free &rarr;</a>
-        <a href="#" class="btn-secondary">Talk to an engineer</a>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -362,11 +387,15 @@
       <div class="footer-bottom">
         <span>&copy; 2026 NexaTech, Inc. All rights reserved.</span>
         <span class="footer-legal">
-          <a href="#" class="footer-legal-link" id="scrollTopPrivacy">Privacy</a>
+          <a href="#" class="footer-legal-link" id="scrollTopPrivacy"
+            >Privacy</a
+          >
           &nbsp;&middot;&nbsp;
           <a href="#" class="footer-legal-link" id="scrollTopTerms">Terms</a>
           &nbsp;&middot;&nbsp;
-          <a href="#" class="footer-legal-link" id="scrollTopCookies">Cookies</a>
+          <a href="#" class="footer-legal-link" id="scrollTopCookies"
+            >Cookies</a
+          >
         </span>
       </div>
     </footer>
