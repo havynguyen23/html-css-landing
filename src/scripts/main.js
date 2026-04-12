@@ -1,5 +1,6 @@
 import { classList, getElementById } from './utils/dom';
 
+const logo = getElementById('logo');
 const hamburger = getElementById('hamburger');
 const navLinks = getElementById('navLinks');
 const overlay = getElementById('navOverlay');
@@ -28,6 +29,10 @@ hamburger.addEventListener('click', () => {
 });
 
 overlay.addEventListener('click', closeMenu);
+
+logo.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 navLinks.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', closeMenu);
