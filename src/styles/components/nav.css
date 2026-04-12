@@ -27,6 +27,10 @@
   color: var(--text);
 }
 
+.nav-links a.active {
+  color: var(--text);
+}
+
 .nav-cta {
   background: var(--accent);
   color: #fff !important;

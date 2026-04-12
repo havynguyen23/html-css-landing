@@ -34,6 +34,29 @@ logo.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+const navAnchors = [...navLinks.querySelectorAll('a[href^="#"]')].filter(
+  (a) => a.getAttribute('href') !== '#',
+);
+const sections = navAnchors.map((a) =>
+  document.querySelector(a.getAttribute('href')),
+);
+
+const updateActiveLink = () => {
+  const scrollY = window.scrollY;
+  let current = -1;
+
+  sections.forEach((section, i) => {
+    if (section && scrollY >= section.offsetTop - 120) current = i;
+  });
+
+  navAnchors.forEach((a, i) => {
+    a.classList.toggle('active', i === current);
+  });
+};
+
+window.addEventListener('scroll', updateActiveLink, { passive: true });
+updateActiveLink();
+
 navLinks.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
