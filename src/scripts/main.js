@@ -57,6 +57,13 @@ const updateActiveLink = () => {
 window.addEventListener('scroll', updateActiveLink, { passive: true });
 updateActiveLink();
 
+['scrollTopPrivacy', 'scrollTopTerms', 'scrollTopCookies'].forEach((id) => {
+  getElementById(id).addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
 navLinks.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
